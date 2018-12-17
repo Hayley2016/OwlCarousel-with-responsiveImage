@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>强大的jQuery焦点图插件Owl Carousel + 响应式图片（案例解析）</title>
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <style>
+        .ad .item {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="ad">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad001-l.png" media="(min-width:50em)">
+                    <source srcset="img/ad001-m.png" media="(min-width:30em)">
+                    <img src="img/ad001.png" alt="2015年度报告">
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad002-l.png" media="(min-width: 50em)">
+                    <source srcset="img/ad002-m.png" media="(min-width: 30em)">
+                    <img srcset="img/ad002.png" alt="新年红包">
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad003-l.png" media="(min-width: 50em)">
+                    <source srcset="img/ad003-m.png" media="(min-width: 30em)">
+                    <img srcset="img/ad003.png" alt="新手秘籍">
+                </picture>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/picturefill/dist/picturefill.min.js"></script>
+<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
+    });
+  });
+</script>
+</html>
